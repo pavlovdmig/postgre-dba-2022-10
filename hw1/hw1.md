@@ -7,6 +7,7 @@
 
 **Установка Yandex Cloud и подключение по ssh**
 1) Для выполнения дз выбрал YC и создал в нем новый проект:
+
     ![image](https://user-images.githubusercontent.com/97864676/199059383-d16f9d12-137f-476b-99bd-03613b35ddf4.png)
 
 2) Установи Yandex Cloud (CLI) для работы с командной строкой.
@@ -16,6 +17,7 @@
     yc config list
     ```
     получаем следующее:
+    
     ![image](https://user-images.githubusercontent.com/97864676/199059537-d66dcb18-d6a8-474c-abbb-3e45b8ed8fab.png)
 
 
