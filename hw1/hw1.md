@@ -7,7 +7,7 @@
 
 **Установка Yandex Cloud и подключение по ssh**
 1) Для выполнения дз выбрал YC и создал в нем новый проект:
-![image](https://user-images.githubusercontent.com/97864676/199059383-d16f9d12-137f-476b-99bd-03613b35ddf4.png)
+    ![image](https://user-images.githubusercontent.com/97864676/199059383-d16f9d12-137f-476b-99bd-03613b35ddf4.png)
 
 2) Установи Yandex Cloud (CLI) для работы с командной строкой.
 3) Проверим настройки профиля командой:
@@ -39,9 +39,9 @@
 
 
 7) Для того, чтобы успешно подключиться к нашей VM используем следующую команду, указав имя пользователя ubuntu и публичный ip адрес VM
- ```
+    ```
     ssh ubuntu@178.154.255.24
- ```
+    ```
     Мы успешно подключились:
     ![image](https://user-images.githubusercontent.com/97864676/199059831-ef77237e-937d-41d0-8db6-1b834a603c2f.png)
 
@@ -50,7 +50,7 @@
 
 1) Установим PostgreSQL 15 следующей командой
     ```
-    sudo apt update && sudo apt upgrade -y -q && sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list' && wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add - && sudo apt-get update && sudo apt -y install postgresql-15
+    sudo apt update && sudo apt upgrade -y -q && sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" >      /etc/apt/sources.list.d/pgdg.list' && wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add - && sudo apt-get update && sudo apt -y   install postgresql-15
     ```
     после успешной установки получаем следующее:
     ![image](https://user-images.githubusercontent.com/97864676/199059896-db53f473-4f9a-4e35-9bd3-18caee2be427.png)
@@ -72,7 +72,7 @@
 
 
 4) Зайдем вторым SSH
-![image](https://user-images.githubusercontent.com/97864676/199060270-5cc71ecc-9f9e-4610-b291-cf71f8656beb.png)
+    ![image](https://user-images.githubusercontent.com/97864676/199060270-5cc71ecc-9f9e-4610-b291-cf71f8656beb.png)
 
 5) Выключаем автокомит
     ```
