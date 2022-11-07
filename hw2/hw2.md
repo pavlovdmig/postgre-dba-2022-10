@@ -13,7 +13,8 @@
     sudo pg_dropcluster 15 main
     pg_lsclusters
     ```
-    имэдж1
+    ![1](https://user-images.githubusercontent.com/97864676/200368311-bd62a044-1e7a-451c-8313-672511f7366e.png)
+
 
 3. Установим Docker следующей командой:
     ```
@@ -27,7 +28,7 @@
     ```
     sudo docker network create pg-net
     ```
-    имэдж 2 
+    ![2](https://user-images.githubusercontent.com/97864676/200368344-dfbe08de-2aee-4b83-a63d-b5d462edc1fb.png) 
 6. Создадим докер образ и смонтируем его в ранее созданный каталог:
     ```
     sudo docker run --name pg-server --network pg-net -e POSTGRES_PASSWORD=postgres -d -p 5432:5432 -v /var/lib/postgres:/var/lib/postgresql/data postgres:14
@@ -36,9 +37,9 @@
     ```
     sudo docker ps -a
     ```
-    имэдж 3
+    ![3](https://user-images.githubusercontent.com/97864676/200368370-8eccc8ec-3cea-4ddd-8fc8-82ee4f42ea03.png)
 8. Создадим БД otus, создадим таблицу otus_table и запоним ее данными. Получим в результате:  следующее:
-БЕЗЫМЯННЫЙ
+    ![Без имени](https://user-images.githubusercontent.com/97864676/200368436-95aa0ce9-a90e-49b1-a62a-9e79fc271af2.png)
 9. Подключимся к контейнеру с сервером с ноутбука извне инстансов ЯО.
     ```
     psql -p 5432 -U postgres -h <public ip> -d postgres -W
@@ -46,7 +47,8 @@
 
 10. Проверим нашу ранее созданную бд и таблицу
 
-    6
+    ![6](https://user-images.githubusercontent.com/97864676/200368501-185eef70-8326-480e-9063-a534198a17b5.png)
+
 11. Удалим наш контейнер с сервером, для этого нам нужно выполнить команды:
     ```
     sudo docker ps -a
@@ -57,9 +59,10 @@
      ```
     sudo docker run --name pg-server --network pg-net -e POSTGRES_PASSWORD=postgres -d -p 5432:5432 -v /var/lib/postgres:/var/lib/postgresql/data postgres:14
     ```
-    7
+    ![7](https://user-images.githubusercontent.com/97864676/200368551-67cede27-f74a-44dc-86ae-d4e7457290e6.png)
+
 13. Подключимся повторно и проверим наличие нашей бд с таблицей:
 
-8
+    ![8](https://user-images.githubusercontent.com/97864676/200368567-421e6b43-b1ee-4a0f-8e8b-4e700b35f371.png)
     
 
