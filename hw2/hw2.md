@@ -38,7 +38,10 @@
     sudo docker ps -a
     ```
     ![3](https://user-images.githubusercontent.com/97864676/200368370-8eccc8ec-3cea-4ddd-8fc8-82ee4f42ea03.png)
-8. Создадим БД otus, создадим таблицу otus_table и запоним ее данными. Получим в результате следующее:
+8. Запускаем отдельный контейнер с клиентом в общей сети. Создадим БД otus, создадим таблицу otus_table и запоним ее данными. Получим в результате следующее:
+    ```
+    sudo docker run -it --rm --network pg-net --name pg-client postgres:14 psql -h pg-server -U postgres
+    ```
     ![Без имени](https://user-images.githubusercontent.com/97864676/200368436-95aa0ce9-a90e-49b1-a62a-9e79fc271af2.png)
 9. Подключимся к контейнеру с сервером с ноутбука извне инстансов ЯО.
     ```
