@@ -38,7 +38,7 @@
     sudo docker ps -a
     ```
     ![3](https://user-images.githubusercontent.com/97864676/200368370-8eccc8ec-3cea-4ddd-8fc8-82ee4f42ea03.png)
-8. Создадим БД otus, создадим таблицу otus_table и запоним ее данными. Получим в результате:  следующее:
+8. Создадим БД otus, создадим таблицу otus_table и запоним ее данными. Получим в результате следующее:
     ![Без имени](https://user-images.githubusercontent.com/97864676/200368436-95aa0ce9-a90e-49b1-a62a-9e79fc271af2.png)
 9. Подключимся к контейнеру с сервером с ноутбука извне инстансов ЯО.
     ```
@@ -59,10 +59,12 @@
      ```
     sudo docker run --name pg-server --network pg-net -e POSTGRES_PASSWORD=postgres -d -p 5432:5432 -v /var/lib/postgres:/var/lib/postgresql/data postgres:14
     ```
-    ![7](https://user-images.githubusercontent.com/97864676/200368551-67cede27-f74a-44dc-86ae-d4e7457290e6.png)
+    ![7](https://user-images.githubusercontent.com/97864676/200369463-d03ab426-6312-4d49-bbd4-c13d8227b268.png)
+
 
 13. Подключимся повторно и проверим наличие нашей бд с таблицей:
+    ![8](https://user-images.githubusercontent.com/97864676/200369556-9ac45a18-6bd7-42bb-b8e5-a247628a2744.png)
 
-    ![8](https://user-images.githubusercontent.com/97864676/200368567-421e6b43-b1ee-4a0f-8e8b-4e700b35f371.png)
+    
     
 
