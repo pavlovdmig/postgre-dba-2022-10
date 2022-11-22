@@ -31,7 +31,7 @@
     create table t2(c1 integer); insert into t2 values (2);
     Отработало без ошибок, так как у нас в searth_path указана схема public, а создавать в ней данные можно под любым пользовавтелем.
     
-    ![11](https://user-images.githubusercontent.com/97864676/203247212-e3107bb7-f842-4631-9466-07f3cb18c6a5.png)
+    ![11](https://user-images.githubusercontent.com/97864676/203248012-fcc70cab-b495-42e4-a4f6-7e6f86e2b437.png)
 12. Чтобы такое избежать, уберем у роли public права.
     
     ![12](https://user-images.githubusercontent.com/97864676/203247252-266a7482-584b-4cc6-8963-e3da262bc5ef.png)
