@@ -29,9 +29,10 @@
     ![10](https://user-images.githubusercontent.com/97864676/203247203-4912927f-7b51-4ed3-bc61-547c78a7df7d.png)
 11.  Теперь попробуйте выполнить команды
     create table t2(c1 integer); insert into t2 values (2);
-    Отработало без ошибок, так как у нас в searth_path указана схема public, а создавать в ней данные можно под любым пользовавтелем.
-    
-    ![11](https://user-images.githubusercontent.com/97864676/203248012-fcc70cab-b495-42e4-a4f6-7e6f86e2b437.png)
+    Отработало без ошибок, так как у нас в searth_path указана схема public, а создавать в ней данные можно под 
+    любым пользовавтелем.
+    ![11](https://user-images.githubusercontent.com/97864676/203248188-218f66db-38e3-4ccd-b226-9545321d6105.png)
+
     
 12. Чтобы такое избежать, уберем у роли public права.
     
