@@ -7,9 +7,11 @@
     ![2](https://user-images.githubusercontent.com/97864676/203247086-05f59b10-da04-49d8-b245-0d3efb5d8d76.png)
 3.  Создаем новую схему testnm, далее создадим новую таблицу t1 с одной колонкой c1 типа integer и вставим строку со значением
      c1=1. 
+    
     ![3](https://user-images.githubusercontent.com/97864676/203247100-f0816497-ccc4-4b72-bfae-ad2629f29445.png)
 4.  Cоздадим новую роль readonly,дадим новой роли право на подключение к базе данных testdb, предоставим новой роли право на 
     использование схемы testnm, дадим новой роли право на select для всех таблиц схемы testnm.
+    
     ![4](https://user-images.githubusercontent.com/97864676/203247105-906448d6-9a7c-4fe0-b22a-45ceea01db73.png)
 5.  Создадим пользователя testread с паролем test123 и дадим роль readonly пользователю testread.
     ![5](https://user-images.githubusercontent.com/97864676/203247117-2659554c-5413-4e3e-b737-027ab1422ee9.png)
@@ -28,9 +30,12 @@
 11.  Теперь попробуйте выполнить команды
     create table t2(c1 integer); insert into t2 values (2);
     Отработало без ошибок, так как у нас в searth_path указана схема public, а создавать в ней данные можно под любым пользовавтелем.
+    
     ![11](https://user-images.githubusercontent.com/97864676/203247212-e3107bb7-f842-4631-9466-07f3cb18c6a5.png)
 12. Чтобы такое избежать, уберем у роли public права.
+    
     ![12](https://user-images.githubusercontent.com/97864676/203247252-266a7482-584b-4cc6-8963-e3da262bc5ef.png)
 13. Порядок, пользователь теперь не имеет прав на создание таблиц.
+    
     ![13](https://user-images.githubusercontent.com/97864676/203247260-981633de-89e8-42c3-918b-51f374430a4a.png)
 
