@@ -109,5 +109,6 @@
     ```
 Результаты замеров на графике. Третий замер самый лучший.
 
-    ![7](https://user-images.githubusercontent.com/97864676/206088051-841666d1-87d5-4be4-9ff1-d7c80fdadda9.png)
+    ![7](https://user-images.githubusercontent.com/97864676/206088287-3ecfc2d2-798a-4673-81bc-a41abda99d14.png)
+
   
