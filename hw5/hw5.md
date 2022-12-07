@@ -4,6 +4,7 @@
 1.  Создаем кластер pg-instance-hw5, устанавливаем на него  PostgreSQL 14 с дефолтными настройками:
     ![1](https://user-images.githubusercontent.com/97864676/206087913-0ab7b0c6-58e7-497a-bbfb-b73d1077ec77.png)
 2.  Посмотрим на наши дефолтные настройки:
+
     ![2](https://user-images.githubusercontent.com/97864676/206087928-9fad11fd-faa6-4cf5-adf0-da563a21b367.png)
 3.  Применим параметры настройки PostgreSQL из прикрепленного к материалам занятия файла
 4.  Здесь два пути было, или например через команду psql(добавятся параметры в postgresql.auto.conf):
