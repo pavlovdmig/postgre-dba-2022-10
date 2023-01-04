@@ -2,9 +2,11 @@
 **Настройка autovacuum с учетом оптимальной производительности**
 
 1.  Создаем кластер pg-instance-hw5, устанавливаем на него  PostgreSQL 14 с дефолтными настройками:
-im1
+    
+    ![1](https://user-images.githubusercontent.com/97864676/206087913-0ab7b0c6-58e7-497a-bbfb-b73d1077ec77.png)
 2.  Посмотрим на наши дефолтные настройки:
-    2im
+
+    ![2](https://user-images.githubusercontent.com/97864676/206087928-9fad11fd-faa6-4cf5-adf0-da563a21b367.png)
 3.  Применим параметры настройки PostgreSQL из прикрепленного к материалам занятия файла
 4.  Здесь два пути было, или например через команду psql(добавятся параметры в postgresql.auto.conf):
     ```
@@ -16,7 +18,8 @@ im1
     ```
 
 5.  Посмотрим на наши недефолтные настройки:
-    3.im
+    
+    ![3](https://user-images.githubusercontent.com/97864676/206087938-a13b07d4-753c-46c2-b951-f9f87ac9d346.png)
 6.  Выполняем pgbench -i postgres и запускаем pgbench -c8 -P 60 -T 600 -U       postgres postgres
     ```
     ubuntu@pg-instance-hw5:~$ sudo -u postgres pgbench -c8 -P 60 -T 600 -U postgres postgres
@@ -45,9 +48,11 @@ im1
     tps = 429.383899 (without initial connection time)
     ```
 7.  Посмотрим настройки автовакуума
-5im
+    
+    ![5](https://user-images.githubusercontent.com/97864676/206087990-34933313-688f-412e-81c1-4b68f28a1ffd.png)
 8.  Поменяем настройки автовакуума, в postgresql.conf
-6 im
+    
+    ![6](https://user-images.githubusercontent.com/97864676/206088019-0e75c05c-1ff1-455c-9fd9-187a6769c481.png)
 9.  Стало хуже в некоторых точках....
     ```
     ubuntu@pg-instance-hw5:~$ sudo -u postgres pgbench -c8 -P 60 -T 600 -U postgres postgres
@@ -103,5 +108,8 @@ im1
     tps = 460.673732 (without initial connection time)
     ```
 Результаты замеров на графике. Третий замер самый лучший.
-7im
+
+    
+![7](https://user-images.githubusercontent.com/97864676/206088334-0f2c35ba-6264-4302-8d04-7f73c7b687c1.png)
+
   
