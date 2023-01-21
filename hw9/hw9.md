@@ -21,7 +21,7 @@
 
     ![4](https://user-images.githubusercontent.com/97864676/213858968-bfb705bd-faa9-437b-96d4-00c3de793ed8.png)
 
-8.  На инстансе main создаем азу данных main и в ней две таблицы test и test2
+8.  На инстансе main создаем базу данных main и в ней две таблицы test и test2
 
     ![5](https://user-images.githubusercontent.com/97864676/213858975-30c94cfb-0bec-4182-b22d-0c02979728f3.png)
 
