@@ -1,0 +1,70 @@
+scope: pgsql
+namespace: /cluster/
+name: postgres2
+
+restapi:
+    listen: 0.0.0.0:8008
+    connect_address: 158.160.51.102:8008
+
+etcd:
+    hosts: 158.160.55.22:2379,158.160.38.83:2379,158.160.61.32:2379
+
+bootstrap:
+    dcs:
+        ttl: 100
+        loop_wait: 10
+        retry_timeout: 10
+        maximum_lag_on_failover: 1048576
+        postgresql:
+            use_pg_rewind: true
+            use_slots: true
+            parameters:
+                    wal_level: replica
+                    hot_standby: "on"
+                    wal_keep_segments: 5120
+                    max_wal_senders: 5
+                    max_replication_slots: 5
+                    checkpoint_timeout: 30
+
+    initdb:
+    - encoding: UTF8
+
+    pg_hba:
+    - host replication postgres ::1/128 md5
+    - host replication postgres 127.0.0.1/8 md5
+    - host replication postgres 62.84.119.251/24 md5
+    - host replication postgres 158.160.51.102/24 md5
+    - host replication postgres 158.160.48.61/24 md5
+    - host all all 0.0.0.0/0 md5
+
+    users:
+        admin:
+            password: '123'
+            options:
+                - createrole
+                - createdb
+
+postgresql:
+    listen: 0.0.0.0:5432
+    connect_address: 158.160.51.102:5432
+    data_dir: /var/lib/postgresql/14/main
+    bin_dir: /usr/lib/postgresql/14/bin
+    pgpass: /tmp/pgpass
+    authentication:
+        replication:
+            username: postgres
+            password: '123'
+        superuser:
+            username: postgres
+            password: '123'
+    create_replica_methods:
+        basebackup:
+            checkpoint: 'fast'
+    parameters:
+        unix_socket_directories: '.'
+
+tags:
+    nofailover: false
+    noloadbalance: false
+    clonefrom: false
+    nosync: false
