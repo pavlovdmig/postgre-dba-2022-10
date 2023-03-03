@@ -9,11 +9,12 @@
 + 3 ВМ с Patroni и PostgreSQL
 + ВМ с Haproxy и клиентом Postgresql
 
-im1
+![1](https://user-images.githubusercontent.com/97864676/222652169-f263cd39-dcbf-424e-b295-08c70df6ec6d.png)
+
 
 Настроенная схема взаимодействия:
 
-im2
+![2](https://user-images.githubusercontent.com/97864676/222652199-1f51b66e-c410-4a51-9652-7fe1601fc810.jpg)
 
 ### Установка и конфигурация ETCD на примере одной из трех нод(config файлы лежат в соответвующих папка проекта)
 ---
@@ -66,7 +67,7 @@ im2
     ``` 
 10. Полученный результат:
     
-    3im
+ ![3](https://user-images.githubusercontent.com/97864676/222652248-cd75beb0-e91b-4626-a4e6-eb76ac16a10f.png)   
 
 ### Установка и конфигурация Patroni на примере одной из трех нод(config файлы лежат в соответвующих папка проекта)
 ---
@@ -232,7 +233,8 @@ im2
     ```
 15. Полученный результат:
     
-    4im
+    ![4](https://user-images.githubusercontent.com/97864676/222652289-198a0eba-cd0f-4ece-889f-6a944b356de1.png)
+
 ### Установка и конфигурация Haproxi(config файл лежит в соответвующей папке проекта)
 ---
 1. Заходим на ноду предназначенную для Haproxy:
